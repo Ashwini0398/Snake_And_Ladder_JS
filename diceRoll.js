@@ -1,5 +1,6 @@
 let constant = require('./constants')
 
+
 class DiceRoll{    
     insert(){
         let player1 = constant.readline.question("Enter the player name: ");
