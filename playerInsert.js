@@ -3,7 +3,7 @@ let roll = new diceRoll.DiceRoll();
 
 let playerPos = 0;
 let player = "Player";
-let dice = 0;
+let dice = 0, count = 0;
 let option = 0;
 
 class PlayerInsert{
@@ -17,6 +17,7 @@ class PlayerInsert{
             dice = roll.diceRoll();
             option = roll.checkOption();
             console.log(`\nDice Rolled : ${dice}`);
+            count++;
             switch(option){
                 case 1: 
                     playerPos += dice; 
@@ -39,14 +40,16 @@ class PlayerInsert{
             }
             console.log(`Your position is : ${playerPos}`);;
         }     
-        
-        console.log("-------------------------------------");
-        this.plrResult(playerPos);
-        return `Your winning position is ${playerPos}`
+
+        console.log("---------------------------------------------------------------");
+        this.plrResult(playerPos, count);
+        return `Your winnig postion is ${playerPos}`;
 
     }
 
-    plrResult(playerPos){
+    plrResult(playerPos, count){
+        console.log(`Dice Rolled ${count} times`);
+        console.log("--------------------------------------------------------------");
         if(playerPos == 100){
             console.log('Congrats!!, YOU WIN');
         }
