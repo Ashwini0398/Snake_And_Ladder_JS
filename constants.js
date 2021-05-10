@@ -1,6 +1,5 @@
-const readline = require('readline-sync')
-const STARTING_POINT = 0;
-const END_POINT = 100;
-const plr1_pos = STARTING_POINT;
+const LADDER = 1;
+const SNAKE = 2;
+const NO_PLAY = 3;
 
-module.exports = {STARTING_POINT, END_POINT, plr1_pos, readline}
+module.exports ={LADDER,SNAKE,NO_PLAY}
